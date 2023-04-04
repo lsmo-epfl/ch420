@@ -1,4 +1,4 @@
-#! /bin/csh -f
+#! /bin/bash -f
 #
 # NPART    = NUMBER OF PARTICLES
 # NSTEP    = NUMBER OF TIMESTEPS

@@ -1,4 +1,4 @@
-#!/bin/csh -f
+#!/bin/bash -f
 #
 # nstep = number of cycles
 # rho   = density

@@ -1,4 +1,4 @@
-#! /bin/csh -f
+#! /bin/bash -f
 #
 # NSTEP     = NUMBER OF TIMESTEPS (X 1000)
 # NINIT     = NUMBER OF INITIALIZATION STEPS
