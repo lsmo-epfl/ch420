@@ -1,0 +1,4 @@
+#! /bin/csh -f
+#
+time ../Source/boltzmann
+exit
