@@ -72,7 +72,11 @@ int main(void)
   // NumInComp[index] = number of particles in compartment 'index'.
 
       // start modification
-
+      for(j=0;j<N;j++)
+      {
+        index=(int)(P*RandomNumber());
+        NumInComp[index]++;
+      }
       // end modification
 
       // make a histogram
