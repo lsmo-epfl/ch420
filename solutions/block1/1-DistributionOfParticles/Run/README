@@ -1,0 +1,45 @@
+# distribution.c
+
+## Variables
+- N: the number of particles
+- P: the number of compartments
+- Ncycle: the number of cycles, the actual number of cycles equals to Ncycle * CycleMultiplication (1000)
+- Distribution: with dimension of P * N, the histogram of the number of particles in each compartment
+- NumInComp: P-dimension array, the number of particles in each compartment
+
+## pseudo codes
+```
+// initialization
+
+// run the cycles
+for each cycle
+    // distribute particles over the compartments
+    for each particle
+        choose a compartment randomly
+        place the particle in the chosen compartment
+
+    // compute the histogram
+    for each compartment
+        count the times of finding x (0 to N) particles in this compartment
+
+// write the results
+Distribution -> results.dat
+// write analytical distribution (Theoretical distribution can be found below) -> analytical.dat
+```
+
+# Probability distribution
+The probability of finding $n_1$ particles in a certain compartment:
+$$ P(n_1) = \frac{N!}{n_1! \times (N-n_1)!} \times (\frac{1}{p})^{n_1} (\frac{p-1}{p})^{N-n_1}
+$$
+
+## When $n_1$ = 0
+$$
+P(0) = (\frac{p-1}{p})^N
+$$
+When $N>>p$, 
+$$
+\lim_{N\to\infty}P(0) = 0
+$$
+
+## Description of the distribution
+The peak of the distribution is at $N/p$. 
