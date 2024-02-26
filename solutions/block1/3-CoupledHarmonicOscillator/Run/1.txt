@@ -1,0 +1,16 @@
+  389  ls
+  390  ssh office
+  391  conda create -name molsim
+  392  conda create --name molsim
+  393  conda activate molsim
+  394  conda install matplotlib
+  395  ls
+  396  run
+  397  ./run
+  398  LS
+  399  ls
+  400  mv results.dat results_4.dat
+  401  ./run
+  402  mv results.dat results_10.dat
+  403  ./run
+  404  mv results.dat results_50.dat
