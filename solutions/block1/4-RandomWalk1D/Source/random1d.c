@@ -50,7 +50,7 @@ int main(void)
       // perform the random walk
       for(k=0;k<NumberOfJumps;k++)
       {
-        if(RandomNumber()<0.5)
+        if(RandomNumber()<0.5) // 0.5 ex 2, 0.8 ex 3
           CurrentPosition+=RIGHT;
         else
           CurrentPosition+=LEFT;

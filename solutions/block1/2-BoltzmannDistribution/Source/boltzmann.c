@@ -14,10 +14,10 @@ int main(void)
   FILE *FilePtr;
 
   // read parameters
-  printf("Number Of Energy Levels (2-10000) ? ");
+  printf("Number Of Energy Levels (2-10000) ? "); // which units?
   fscanf(stdin,"%d",&NumberOfEnergyLevels);
 
-  printf("Temperature ? ");
+  printf("Temperature ? "); // which units?
   fscanf(stdin,"%lf",&Temperature);
 
   // check input
@@ -37,10 +37,8 @@ int main(void)
 
   for(i=0;i<NumberOfEnergyLevels;i++)
   {
-     tmp=exp(-Beta*i);
-
-     // start modification
-
+     // start modification: `tmp=exp(-Beta*i);` or `tmp=(i+1)*exp(-Beta*i);` or `tmp=(2*i+1)*exp(-Beta*(0.5*i*(i+1)));`
+    tmp=... //tmp=(2*i+1)*exp(-Beta*(0.5*i*(i+1)));
      // end modification
 
      Distribution[i]=tmp;

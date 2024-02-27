@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-
+#! /bin/csh -f
 #
 
 time ../Source/random1d
