@@ -55,7 +55,7 @@ void Sample(int Switch, int CurrentPosition)
       break;
     case WRITE_RESULTS:
       // write everything to disk
-      FilePtr=fopen("rms.dat","w");
+      FilePtr=fopen("msd.dat","w");
       for(i=0;i<T_MAX;i++)
       {
         if(Count[i]>=0.5)
