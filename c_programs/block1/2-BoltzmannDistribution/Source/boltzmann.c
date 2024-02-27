@@ -37,10 +37,8 @@ int main(void)
 
   for(i=0;i<NumberOfEnergyLevels;i++)
   {
-     tmp=exp(-Beta*i);
-
      // start modification
-
+    tmp=...;
      // end modification
 
      Distribution[i]=tmp;
