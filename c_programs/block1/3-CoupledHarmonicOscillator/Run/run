@@ -1,5 +1,4 @@
-#! /bin/csh -f
-#
+#! /bin/sh -f
 
 time ../Source/harmonic
 
