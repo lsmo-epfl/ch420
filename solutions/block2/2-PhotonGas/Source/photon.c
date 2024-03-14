@@ -10,7 +10,7 @@ int main(void)
 {
   int  NumberOfCycles,NumberOfInitializationSteps,New,Old,i,j;
   double Beta,Sum,Count;
-      
+        
   // initialize the random number generator with the system time
   InitializeRandomNumberGenerator(time(0l));
 
@@ -34,7 +34,7 @@ int main(void)
   Old=1;
   Sum=0.0;
   Count=0.0;
-
+  float distribution[NumberOfCycles*CycleMultiplication];
   // Loop Over All Cycles
   for(i=0;i<NumberOfCycles;i++)
   {
@@ -42,13 +42,24 @@ int main(void)
     {
       // start modification
 
+      New = Old;
+      if (RandomNumber()>=0.5)
+      New ++;
+      else
+      if (New != 0)
+      New --;
+
       // end   modification
 
-      // accept or reject
-      if(RandomNumber()<exp(-Beta*(New-Old)))
+     if(RandomNumber()<exp(-Beta*(New-Old)))
       {  
         Old=New;
       }
+
+      // start modification
+      distribution[Old] += 1.0; // add to distribution // end modification
+
+
       // calculate average occupancy result
       if(i>NumberOfInitializationSteps)
       {
@@ -56,8 +67,18 @@ int main(void)
         Count+=1.0;
       }
     }
+    // modification start
+    // print and write probability density of nj from 0 to 14 FILE ∗p1 = fopen("distribution.dat", "w");
+    
+    // modification end
   }
-
+  FILE *p1 = fopen("distribution.dat", "w");
+  if (p1==NULL) printf("Open failed\n");
+  for(i=0;i<15;i++) {
+  printf("occupancy number %d : %lf\n",i, \
+  distribution[i]/(NumberOfCycles*CycleMultiplication));
+  fprintf(p1, "%d, %lf\n", i, distribution[i]/(NumberOfCycles*CycleMultiplication)); }
+  fclose(p1);
   // write the final result
   printf( "\nResults:\n" );
   printf("Average Value     : %lf\n",Sum/Count);

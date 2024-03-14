@@ -1,0 +1,20 @@
+How many cycles (x 1000)? How many initialization cycles (x 1000)? Beta*epsilon (Example: 1.0) ?occupancy number 0 : 0.402100
+occupancy number 1 : 0.238060
+occupancy number 2 : 0.142180
+occupancy number 3 : 0.086060
+occupancy number 4 : 0.051870
+occupancy number 5 : 0.032190
+occupancy number 6 : 0.019020
+occupancy number 7 : 0.010840
+occupancy number 8 : 0.006820
+occupancy number 9 : 0.004310
+occupancy number 10 : 0.002890
+occupancy number 11 : 0.001630
+occupancy number 12 : 0.001130
+occupancy number 13 : 0.000590
+occupancy number 14 : 0.000180
+
+Results:
+Average Value     : 1.518124
+Theoretical Value : 1.541494
+Relative Error    : 0.015161
