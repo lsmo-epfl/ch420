@@ -1,0 +1,9 @@
+Number of cycles (x 1000)? 2
+Ratio l/d        ? (always >= 1 !) 1
+Estimate of Pi : 3.176000
+Real Pi        : 3.141593
+Relative error : 0.0109522
+
+real    0m3.436s
+user    0m0.007s
+sys     0m0.000s

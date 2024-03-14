@@ -55,6 +55,21 @@ int main(void)
 
       // Start Modifications
 
+        NumberOfHits=0.0;
+        NumberOfTrials=0.0;
+        for(i=0;i<NumberOfCycles;i++)
+        {
+          for(j=0;j<CycleMultiplication;j++)
+          {
+            x=(RandomNumber()-0.5)*ratio;
+            y=(RandomNumber()-0.5)*ratio;
+            if(sqrt(x*x+y*y)<0.5)
+              NumberOfHits+=1.0;
+            NumberOfTrials+=1.0;
+          }
+        }
+        pi = 4*SQR(ratio) * NumberOfHits/NumberOfTrials;
+
       // End Modifications
        }
      // Remember that we are using r = 0.5d.

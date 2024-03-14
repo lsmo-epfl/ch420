@@ -178,10 +178,10 @@ int main(void)
   printf("Final Energy                        : %d\n",Utot);
   printf("Average Energy First Oscillator 1   : %f\n",Sum/Count);
 
-  FilePtr=fopen("results.dat","w");
+  FilePtr=fopen("results.dat","w"); // only wrt the first oscillator (see lines 164, 156 etc)
   for(i=0;i<MAX_ENERGY;i++)
   {
-    if(Distribution[i]>0.5)
+    if(Distribution[i]>0.5) // to avoid printing very small values (?)
       fprintf(FilePtr,"%d %f\n",i,Distribution[i]/Normalization);
   }
   fclose(FilePtr);
