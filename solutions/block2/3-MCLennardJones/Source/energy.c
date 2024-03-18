@@ -34,7 +34,7 @@ void EnergyParticle(VECTOR pos,int i,int jb,double *En,double *Vir)
         Enij+=4.0*Epsilon*(SQR(r6i)-r6i);
 
         // start modification virial
-
+        Virij += 4.0*6*Epsilon*(2*SQR(r6i)-r6i);
         // end modification virial
       }
     }
@@ -55,7 +55,7 @@ void EnergySystem(void)
   {
     EnergyParticle(Positions[i],i,i+1,&Eni,&Viri);
     TotalEnergy+=Eni;
-    TotalVirial+=Viri;
+    TotalVirial+=Viri;    
   }
 
   // add tail-correction

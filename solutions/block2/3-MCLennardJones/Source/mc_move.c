@@ -12,7 +12,7 @@ void Mcmove(void)
   int i;
  
   NumberOfAttempts++;
-
+  for(i=0;i<NumberOfParticles;i++) { // change to add a loop for all particles
   // choose a random particle
   i=NumberOfParticles*RandomNumber();
 
@@ -56,5 +56,6 @@ void Mcmove(void)
    Positions[i].x=NewPosition.x;
    Positions[i].y=NewPosition.y;
    Positions[i].z=NewPosition.z;
+  }
   }
 }

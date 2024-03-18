@@ -8,7 +8,7 @@
 # dr     = maximum displacement
 # npart  = number of particles
 
-for rho in 0.1 
+for rho in 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.2 1.4 1.6 2.0 2.2 2.6 3.0 
 do
 temp=2.0
 
