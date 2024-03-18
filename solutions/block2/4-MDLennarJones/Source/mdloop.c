@@ -53,8 +53,8 @@ void Mdloop(void)
     // Start Modification
     // Choose a starting point to calculate the energy drift
     // Use Utot0
-
-
+    if(i==NumberOfInitializationSteps) 
+       Utot0=UTotal;
     // End Modification
 
     Tempz=2.0*UKinetic/(3.0*NumberOfParticles-3.0);
@@ -90,7 +90,8 @@ void Mdloop(void)
     //  update the energy drift
     //  (Use dUtot.)
 
-
+    dUtot += fabs((Utot0-UTotal)/Utot0);
+    
     //  End Modification
 
     }
