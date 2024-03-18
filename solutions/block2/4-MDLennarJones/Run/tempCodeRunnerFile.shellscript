@@ -1,0 +1,6 @@
+cat > input <<endofdata
+# $BOX    $NPART $NSTEP  $TEMP  $DELTAT $NINIT
+# endofdata
+# time ../Source/md_nve
+# rm input
+# exit
