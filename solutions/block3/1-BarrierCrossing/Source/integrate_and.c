@@ -10,6 +10,14 @@ void IntegrateAndersen(void)
   double U,F;
 
   // start modification
+    Position+=0.5*OldF*SQR(Tstep)+Tstep*Velocity;
+    Velocity+=0.5*OldF*Tstep;
+    Force(Position,&U,&F);
+    Velocity+=0.5*F*Tstep;
+    ConservedEnergy=0.0;
+    OldF=F;
 
+    // Random Velocity 
+    if(RandomNumber()<(Nu*Tstep)) Velocity=RandomVelocity(Temperature);
   // end modification
 }

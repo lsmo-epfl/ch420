@@ -24,6 +24,7 @@ void IntegrateMonteCarlo(void);
 void IntegrateNVE(void);
 void IntegrateNoseHoover(void);
 void IntegrateRescaling(void);
+void IntegrateBerendsen(void);
 void ReadData(void);
 void SampleDiff(int Switch);
 void SampleProf(int Switch);

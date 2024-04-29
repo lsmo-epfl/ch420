@@ -22,6 +22,15 @@ void IntegrateNVE(void)
   double U,F,NewVelocity;
 
   // start modification
+// Integration of equations of motion: Leap Frog.
+    Force(Position,&U,&F);
+    NewVelocity=Velocity+Tstep*F;
+    Position+=Tstep*NewVelocity;
+// Conserved quantity is v(t) = (Vpos + Vnew)/2.
+// We square them, so we need a factor 8.
+    ConservedEnergy=U+SQR(NewVelocity+Velocity)/8.0;
+    Velocity=NewVelocity;
+    OldF=F;
 
   // end modification
 } 

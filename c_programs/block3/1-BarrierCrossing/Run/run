@@ -1,5 +1,5 @@
 #! /bin/bash -f
-#
+
 # NSTEP     = NUMBER OF TIMESTEPS (X 1000)
 # NINIT     = NUMBER OF INITIALIZATION STEPS
 # TEMP      = TEMPERATURE
@@ -14,14 +14,14 @@
 #           = 4 (NO MD, BUT SIMPLE MC)
 #           = 5 (CANONICAL VELOCITY RESCALING)
 
-set NSTEP     = 5000
-set NINIT     = 50
-set TEMP      = 0.05
-set TSTEP     = 0.01
-set CHOICE    = 3
-set NU        = 10.0
-set FREQNOS   = 1.5
-set NNOSHOVER = 1
+NSTEP=5000
+NINIT=1000
+TEMP=0.05
+TSTEP=0.01
+CHOICE=1
+NU=5.0
+FREQNOS=1
+NNOSHOVER=5
 
 cat > input <<endofdata
 $NSTEP  $TEMP  $TSTEP    $NINIT

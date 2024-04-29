@@ -4,6 +4,8 @@
 #include "system.h"
  
 // calculate the forces and potential energy
+/*
+// original energy barrier
 void Force(double x,double *U,double *F)
 {
   if(x<=0.0)
@@ -21,4 +23,12 @@ void Force(double x,double *U,double *F)
     *U=1.0-cos(2.0*M_PI*x);
     *F=-2.0*M_PI*sin(2.0*M_PI*x);
   }
+}
+*/
+
+// periodic potential
+void Force(double x,double *U,double *F)
+{
+  *U=1.0-cos(2.0*M_PI*x);
+  *F=2.0*M_PI*sin(2.0*M_PI*x);
 }
