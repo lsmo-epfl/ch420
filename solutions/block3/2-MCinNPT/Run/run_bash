@@ -1,4 +1,4 @@
-#! /bin/zsh -f
+#! /bin/bash -f
 #
 # NPART    = NUMBER OF PARTICLES
 # NSTEP    = NUMBER OF TIMESTEPS
@@ -11,15 +11,16 @@
 NSTEP=2000
 NINIT=200
 NPART=100
-DISPMAX=1
-VOLMAX=1
+DISPMAX=1.0
+VOLMAX=0.01
 BETA=1.0
 
-foreach PRESSURE (1.0 )
-cat > input <<endofdata
+for PRESSURE in 1.0
+do
+    cat > input <<endofdata
 $NSTEP $NINIT $NPART $DISPMAX $VOLMAX $BETA $PRESSURE
 endofdata
-time ../Source/mc_npt
-end
+    time ../Source/mc_npt
+done
 rm input
 exit
