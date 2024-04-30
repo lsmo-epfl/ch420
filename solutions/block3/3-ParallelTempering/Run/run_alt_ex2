@@ -1,0 +1,35 @@
+#!/bin/bash -f
+#
+# nstep = number of cycles
+# rho   = density
+# ppt   = fraction of exchanges
+# ntemp = number of temperatures (systems)
+
+nstep=100000
+rho=2.5
+ppt=0.2
+ntemp=1
+
+mkdir -p diff_est
+
+for temp in 0.001 0.01 0.025 0.05; do
+    i=1
+    while [ $i -le 1 ]; do
+        echo "Running for temperature $temp, run $i"
+        cat > input <<EOF
+Rho  Ppt   Nstep   Ntemp
+$rho $ppt  $nstep  $ntemp
+Temperatures
+$temp
+EOF
+        ../Source/pt >> "output_${temp}_${i}.txt"
+        xpos=$(grep -i -A1 "Average X" "output_${temp}_${i}.txt" | grep -Eo "[0-9]+\.[0-9]+")
+        echo "$temp $xpos" >> output.txt
+        mv "output_${temp}_${i}.txt" diff_est/
+        mv energy_distribution.dat "diff_est/energy_distribution_${temp}_${i}.dat"
+        mv input "diff_est/input_${temp}_${i}"
+        mv output.txt "diff_est/output_${temp}_${i}.txt"
+        mv position_distribution.dat "diff_est/position_distribution_${temp}_${i}.dat"
+        ((i++))
+    done
+done

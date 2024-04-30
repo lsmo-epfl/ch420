@@ -12,7 +12,7 @@ int main(void)
 { 
   FILE *FilePtr;
   int i,j,system=0,SystemA=0,SystemB=0,NumberOfSteps,particle,k;
-  double Rho,Del,U,Rxold,Ryold,swap=0.0;
+  double Rho,Del,U,Rxold,Ryold,swap=0.0; 
   double DispSum[MAXNUMBEROFSYSTEMS],DispCount[MAXNUMBEROFSYSTEMS];
   double SwapSum[MAXNUMBEROFSYSTEMS],SwapCount[MAXNUMBEROFSYSTEMS];
   double EnergySum[MAXNUMBEROFSYSTEMS],EnergyCount[MAXNUMBEROFSYSTEMS];

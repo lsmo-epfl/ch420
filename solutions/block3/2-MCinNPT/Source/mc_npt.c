@@ -90,8 +90,11 @@ int main(void)
         NumberOfVolumeTrials++;
         Vold=CUBE(Box);
         Boxold=Box;
+        
         Vnew=exp(log(Vold)+(RandomNumber()-0.5)*MaximumVolumeChange);
-
+        // random walk in V
+        //Vnew=Vold+(RandomNumber()-0.5)*MaximumVolumeChange;
+        
         Box=pow(Vnew,1.0/3.0);
 
         // transform coordinates
@@ -129,6 +132,10 @@ int main(void)
         }
 
         // no overlap... use acceptance rule
+        //if((!overlap)&&(RandomNumber()<exp(-Beta*Pressure*(Vnew-Vold)+log(Vnew/Vold)*(NumberOfParticles+1.0))))
+        //random walk in V
+
+        //if ((!overlap)&&(RandomNumber()<exp(-Beta*Pressure*(Vnew-Vold)+log(Vnew/Vold)*(NumberOfParticles))))
         if((!overlap)&&(RandomNumber()<exp(-Beta*Pressure*(Vnew-Vold)+log(Vnew/Vold)*(NumberOfParticles+1.0))))
         {
           NumberOfVolumeAccepted++;
