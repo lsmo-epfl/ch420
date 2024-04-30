@@ -121,6 +121,27 @@ int main(void)
 
         // start modification
 
+        SystemA=(int)(NumberOfSystems*RandomNumber());
+        SystemB=(int)(NumberOfSystems*RandomNumber());
+
+        if (SystemB == NumberOfSystems - 1)
+          SystemB--;
+
+        if(RandomNumber()<exp((Beta[SystemA] - Beta[SystemB]) * (Uold[SystemA] - Uold[SystemB])))
+        {
+          SwapSum[SystemA]+=1.0;
+          SwapSum[SystemB]+=1.0;
+          // Swap systems (only coordinates, not energies or temperatures)
+          for (j=0;j<NUMBEROFPARTICLES;j++)
+          {
+            SWAP(Positions[j][SystemA].x,Positions[j][SystemB].x)
+            SWAP(Positions[j][SystemA].y,Positions[j][SystemB].y)
+          }
+        }
+
+        SwapCount[SystemA]+=1.0;
+        SwapCount[SystemB]+=1.0;
+
         // end modification
       }
       else

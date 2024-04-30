@@ -1,0 +1,32 @@
+#!/bin/bash -f
+#
+# nstep = number of cycles
+# rho   = density
+# ppt   = fraction of exchanges
+# ntemp = number of temperatures (systems)
+
+nstep=100000
+rho=2.5
+ppt=0.2
+
+mkdir -p swp_diff_est
+
+for ntemp in 1 2 3 4; do 
+    i=1
+    while [ $i -le 1 ]; do
+        echo "Running for Nsystems $ntemp, run $i"
+        cat > input <<EOF
+Rho  Ppt   Nstep   Ntemp
+$rho $ppt  $nstep  $ntemp
+Temperatures
+0.001 0.003 0.015 0.05
+EOF
+        ../Source/pt >> "output_${ntemp}_${i}.txt"
+        xpos=$(grep -i -A1 "Average X" "output_${ntemp}_${i}.txt" | grep -Eo "[0-9]+\.[0-9]+")
+        mv "output_${ntemp}_${i}.txt" diff_est/
+        mv energy_distribution.dat "swp_diff_est/energy_distribution_${ntemp}_${i}.dat"
+        mv input "swp_diff_est/input_${ntemp}_${i}"
+        mv position_distribution.dat "swp_diff_est/position_distribution_${ntemp}_${i}.dat"
+        ((i++))
+    done
+done
