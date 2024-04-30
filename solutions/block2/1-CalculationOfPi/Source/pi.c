@@ -68,7 +68,7 @@ int main(void)
             NumberOfTrials+=1.0;
           }
         }
-        pi = 4*SQR(ratio) * NumberOfHits/NumberOfTrials;
+        // pi = 4*SQR(ratio) * NumberOfHits/NumberOfTrials;
 
       // End Modifications
        }

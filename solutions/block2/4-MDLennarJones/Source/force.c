@@ -44,6 +44,7 @@ void Force(void)
         r6i=CUBE(r2i);
  
         UPotential+=4.0*r6i*(r6i-1.0)-Ecut;
+        // Error here, change r2i to r6i, derivates of lennard-jones potential
         Ff=48.0*r6i*(r6i-0.5);
         Pressure+=Ff;
         Ff=Ff*r2i;

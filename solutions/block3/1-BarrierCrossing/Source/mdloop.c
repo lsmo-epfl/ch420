@@ -33,16 +33,16 @@ void MdLoop(void)
 	{
 	case 1:
 	  IntegrateNVE();
-          break;
+    break;
 	case 2:
-          IntegrateAndersen();
-          break;
+    IntegrateAndersen();
+    break;
 	case 3:
-          IntegrateNoseHoover();
-          break;
+    IntegrateNoseHoover();
+    break;
 	case 4:
-          IntegrateMonteCarlo();
-          break;
+    IntegrateMonteCarlo();
+    break;
 	case 5:
 	  IntegrateBerendsen();
 	  break;
