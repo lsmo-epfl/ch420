@@ -2,12 +2,10 @@ Density            : 2.500000
 Boxsize            : 1.897367
 Fraction Exchanges : 0.200000
 Number Of Steps    : 100000
-Number Of Temp.    : 5
+Number Of Temp.    : 3
 Temp. (Energy)     : 0.001000 (10.926472)
-Temp. (Energy)     : 0.000000 (10.926472)
-Temp. (Energy)     : 0.000000 (10.926472)
-Temp. (Energy)     : 0.000000 (10.926472)
-Temp. (Energy)     : 0.000000 (10.926472)
+Temp. (Energy)     : 0.015000 (10.926472)
+Temp. (Energy)     : 0.050000 (10.926472)
 i: 0
 i: 1000
 i: 2000
@@ -112,28 +110,20 @@ i: 99000
 
 
 Average Energy
-Temp : 0 0.045610
-Temp : 1 0.031615
-Temp : 2 0.031611
-Temp : 3 0.031609
-Temp : 4 0.031610
+Temp : 0 0.045597
+Temp : 1 0.212075
+Temp : 2 0.600767
 
 Average X Coordinate
-Temp : 0 0.499994
-Temp : 1 0.999999
-Temp : 2 1.000000
-Temp : 3 0.999989
-Temp : 4 0.999999
+Temp : 0 0.995708
+Temp : 1 0.493721
+Temp : 2 0.483356
 
 Fraction Accepted Displacements:
-Temp : 0 0.237701
-Temp : 1 0.000013
-Temp : 2 0.000013
-Temp : 3 0.000015
-Temp : 4 0.000013
+Temp : 0 0.237641
+Temp : 1 0.771371
+Temp : 2 0.879057
 
 Fraction Accepted Exchanges:
-0 1 0.000001
-1 2 0.000000
-2 3 0.000000
-3 4 0.000000
+0 1 0.333357
+1 2 0.336261

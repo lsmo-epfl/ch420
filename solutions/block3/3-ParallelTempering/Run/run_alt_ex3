@@ -37,7 +37,7 @@ $temps
 EOF
         ../Source/pt >> "output_${ntemp}_${i}.txt"
         xpos=$(grep -i -A1 "Average X" "output_${ntemp}_${i}.txt" | grep -Eo "[0-9]+\.[0-9]+")
-        mv "output_${ntemp}_${i}.txt" diff_est/
+        mv "output_${ntemp}_${i}.txt" swp_diff_est/
         mv energy_distribution.dat "swp_diff_est/energy_distribution_${ntemp}_${i}.dat"
         mv input "swp_diff_est/input_${ntemp}_${i}"
         mv position_distribution.dat "swp_diff_est/position_distribution_${ntemp}_${i}.dat"
