@@ -124,8 +124,9 @@ int main(void)
         SystemA=(int)(NumberOfSystems*RandomNumber());
         SystemB=(int)(NumberOfSystems*RandomNumber());
 
-        if (SystemB == NumberOfSystems - 1)
-          SystemB--;
+        // double check
+        // if (SystemB == NumberOfSystems - 1)
+        //   SystemB--;
 
         if(RandomNumber()<exp((Beta[SystemA] - Beta[SystemB]) * (Uold[SystemA] - Uold[SystemB])))
         {

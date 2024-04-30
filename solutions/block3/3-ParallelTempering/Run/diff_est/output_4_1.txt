@@ -111,24 +111,24 @@ i: 99000
 
 
 Average Energy
-Temp : 0 0.045487
-Temp : 1 0.070980
-Temp : 2 0.211801
-Temp : 3 0.600242
+Temp : 0 0.045510
+Temp : 1 0.070913
+Temp : 2 0.214005
+Temp : 3 0.603933
 
 Average X Coordinate
-Temp : 0 0.514473
-Temp : 1 0.519640
-Temp : 2 0.497215
-Temp : 3 0.505902
+Temp : 0 0.627216
+Temp : 1 0.630816
+Temp : 2 0.631541
+Temp : 3 0.598421
 
 Fraction Accepted Displacements:
-Temp : 0 0.217543
-Temp : 1 0.489262
-Temp : 2 0.770113
-Temp : 3 0.879290
+Temp : 0 0.215834
+Temp : 1 0.486912
+Temp : 2 0.770386
+Temp : 3 0.878880
 
 Fraction Accepted Exchanges:
-0 1 0.251962
-1 2 0.251845
-2 3 0.334801
+0 1 0.251745
+1 2 0.251954
+2 3 0.252274

@@ -4,7 +4,7 @@ Fraction Exchanges : 0.200000
 Number Of Steps    : 100000
 Number Of Temp.    : 2
 Temp. (Energy)     : 0.001000 (10.926472)
-Temp. (Energy)     : 0.003000 (10.926472)
+Temp. (Energy)     : 0.050000 (10.926472)
 i: 0
 i: 1000
 i: 2000
@@ -109,16 +109,16 @@ i: 99000
 
 
 Average Energy
-Temp : 0 0.045508
-Temp : 1 0.071419
+Temp : 0 0.045579
+Temp : 1 0.598518
 
 Average X Coordinate
-Temp : 0 0.750481
-Temp : 1 0.742044
+Temp : 0 0.995714
+Temp : 1 0.508060
 
 Fraction Accepted Displacements:
-Temp : 0 0.209040
-Temp : 1 0.490295
+Temp : 0 0.237539
+Temp : 1 0.880251
 
 Fraction Accepted Exchanges:
-0 1 0.669475
+0 1 0.499827
